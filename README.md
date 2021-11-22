@@ -1,2 +1,10 @@
 # Optimal_Discretization_RL
-Repository for python programs implementing optimal adaptive spatial discretization via Reinforcement Learning.
+Python code implementing optimal adaptive spatial discretization via Reinforcement Learning. This repository provides basic functions, tutorials, figures related to solving the problem of generating policies mapping measurement locations and associated measurements to the subsequent measurement location maximizing an arbitrary measure of success. 
+
+Code and figures are meant as supplementaries the paper "Adaptive spatial discretization using reinforcement learning" by Jemil Butt and Andreas Wieser. The repository consists of three separate folders whose contents offer different functionality.
+
+The root folder contains the python functions necessary to execute the reinforcement learning process. The four tutorial examples from the paper - Optimization of measurement policies for beam bending, random 1D deformation, random 2D deformation, and deformation tracking - are archived there. Each example consists in a file defining the environment and a file for training and benchmarking. The file "rl_support_funs.py" contains auxiliary numerical functions.
+
+The two folders "Figures", and "Saved_Models" contain figures illustrating the trained agents and the trained agents (in form of weights for neural networks) used to create the figures. The models can be loaded by making sure the lines starting with "model=TD3.load*" in the benchmark files are unchecked (default). If instead a retraining of the model is desired, comment out this line and uncomment the preceeding four lines instead. 
+
+The code is provided with the sole intent being helpful for purposes of education and teaching and we hope, it will be found to be useful. Although we took care to provide clean and well-documented programs, no guarantees as with respect to its correctness can be given and we are aware of a number of numerical instabilities and fail-cases. The code makes use of the open source projects "stable-baselines3" for implementing reinforcement learning machinery, "pytorch" as the backbone for the training of neural networks and "numpy". The associated packages are assumed to be installed.
